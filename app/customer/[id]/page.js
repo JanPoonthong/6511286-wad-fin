@@ -11,9 +11,7 @@ const CustomerDetail = ({ params }) => {
     if (id) {
       const fetchCustomer = async () => {
         try {
-          const response = await fetch(
-            `/api/customer/${id}`,
-          );
+          const response = await fetch(`/api/customer/${id}`);
           if (response.ok) {
             const data = await response.json();
             setCustomer(data);
