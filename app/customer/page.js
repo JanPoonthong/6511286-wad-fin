@@ -17,7 +17,7 @@ const Home = () => {
   useEffect(() => {
     const fetchCustomers = async () => {
       try {
-        const response = await fetch("http://localhost:3000/api/customer");
+        const response = await fetch("/api/customer");
         if (response.ok) {
           const data = await response.json();
           setCustomers(data);
@@ -41,7 +41,7 @@ const Home = () => {
   // Create a new customer
   const createCustomer = async () => {
     try {
-      const response = await fetch("http://localhost:3000/api/customer", {
+      const response = await fetch("/api/customer", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(newCustomer),
@@ -66,7 +66,7 @@ const Home = () => {
   // Delete a customer
   const deleteCustomer = async (id) => {
     try {
-      const response = await fetch(`http://localhost:3000/api/customer/${id}`, {
+      const response = await fetch(`/api/customer/${id}`, {
         method: "DELETE",
       });
       if (response.ok) {
@@ -82,7 +82,7 @@ const Home = () => {
   // Update a customer
   const updateCustomer = async (id) => {
     try {
-      const response = await fetch(`http://localhost:3000/api/customer/${id}`, {
+      const response = await fetch(`/api/customer/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(editingCustomer),

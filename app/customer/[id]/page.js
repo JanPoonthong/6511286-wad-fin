@@ -12,7 +12,7 @@ const CustomerDetail = ({ params }) => {
       const fetchCustomer = async () => {
         try {
           const response = await fetch(
-            `http://localhost:3000/api/customer/${id}`,
+            `/api/customer/${id}`,
           );
           if (response.ok) {
             const data = await response.json();
