@@ -4,11 +4,12 @@ import mongoose from "mongoose";
 const categorySchema = new mongoose.Schema({
   name: {
     type: String,
-    required: true
+    required: true,
   },
-  order: Number
+  order: Number,
 });
 
-const Category = mongoose.models.category || mongoose.model("category", categorySchema);
+const Category =
+  mongoose.models.category || mongoose.model("category", categorySchema);
 
 export default Category;

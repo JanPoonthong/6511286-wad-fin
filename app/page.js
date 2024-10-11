@@ -1,5 +1,5 @@
-"use client"
-import * as React from 'react';
+"use client";
+import * as React from "react";
 
 export default function HomeV2() {
   return (
